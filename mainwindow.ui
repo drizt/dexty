@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dexty</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="lblTime">
+          <property name="text">
+           <string>00:00</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Type" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMode">
+    <property name="title">
+     <string>Mode</string>
+    </property>
+    <widget class="QMenu" name="menuOtherModes">
+     <property name="title">
+      <string>Other Modes</string>
+     </property>
+     <addaction name="actLetters_from_Phrases"/>
+     <addaction name="actAllCharacters"/>
+     <addaction name="actExternalTextFile"/>
+     <addaction name="separator"/>
+     <addaction name="actChooseExternalFile"/>
+    </widget>
+    <addaction name="actLessons"/>
+    <addaction name="actPhrases"/>
+    <addaction name="menuOtherModes"/>
+    <addaction name="separator"/>
+    <addaction name="actPrevLesson"/>
+    <addaction name="actNextLesson"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <widget class="QMenu" name="menuLayout">
+     <property name="title">
+      <string>Layout</string>
+     </property>
+    </widget>
+    <addaction name="menuLayout"/>
+    <addaction name="actKeyboard"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuUsers">
+    <property name="title">
+     <string>Users</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionList"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionSOS"/>
+    <addaction name="actionAbout_Stamina"/>
+   </widget>
+   <addaction name="menuMode"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuUsers"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actLessons">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Lesson</string>
+   </property>
+   <property name="shortcut">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actPhrases">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Phrases</string>
+   </property>
+   <property name="shortcut">
+    <string>2</string>
+   </property>
+  </action>
+  <action name="actionB_A_S_I_C_L_E_S_S_O_N_S">
+   <property name="text">
+    <string>B A S I C   L E S S O N S</string>
+   </property>
+  </action>
+  <action name="actionC_O_M_B_I_N_A_T_I_O_N_S">
+   <property name="text">
+    <string>C O M B I N A T I O N S</string>
+   </property>
+  </action>
+  <action name="actionD_I_G_I_T_S_S_Y_M_B_O_L_S">
+   <property name="text">
+    <string>D I G I T S   &amp;&amp;   S Y M B O L S</string>
+   </property>
+  </action>
+  <action name="actionS_P_E_C_I_A_L_M_O_D_E_S">
+   <property name="text">
+    <string>S P E C I A L   L E S S O N S</string>
+   </property>
+  </action>
+  <action name="actPrevLesson">
+   <property name="text">
+    <string>Previous Lesson</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actNextLesson">
+   <property name="text">
+    <string>Next Lesson</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionLesson_editor">
+   <property name="text">
+    <string>PrevLes</string>
+   </property>
+  </action>
+  <action name="actionAdd_phrases">
+   <property name="text">
+    <string>NextLes</string>
+   </property>
+  </action>
+  <action name="actKeyboard">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Keyb</string>
+   </property>
+  </action>
+  <action name="actionPlaylist">
+   <property name="text">
+    <string>Playlist</string>
+   </property>
+  </action>
+  <action name="actionNext_song">
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionVolume_up_10">
+   <property name="text">
+    <string>VolUp</string>
+   </property>
+  </action>
+  <action name="actionOn_off">
+   <property name="text">
+    <string>OnOff</string>
+   </property>
+  </action>
+  <action name="actionVolume_down">
+   <property name="text">
+    <string>VolDn</string>
+   </property>
+  </action>
+  <action name="actionList">
+   <property name="text">
+    <string>List</string>
+   </property>
+  </action>
+  <action name="actionSOS">
+   <property name="text">
+    <string>SOS</string>
+   </property>
+  </action>
+  <action name="actionLogical_game">
+   <property name="text">
+    <string>Game</string>
+   </property>
+  </action>
+  <action name="actionAbout_Stamina">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actLetters_from_Phrases">
+   <property name="text">
+    <string>Letters</string>
+   </property>
+   <property name="shortcut">
+    <string>3</string>
+   </property>
+  </action>
+  <action name="actAllCharacters">
+   <property name="text">
+    <string>All Charactes</string>
+   </property>
+   <property name="shortcut">
+    <string>4</string>
+   </property>
+  </action>
+  <action name="actExternalTextFile">
+   <property name="text">
+    <string>External Text File</string>
+   </property>
+   <property name="shortcut">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actChooseExternalFile"/>
+  <action name="actLessonEditor">
+   <property name="text">
+    <string>Lesson Editor...</string>
+   </property>
+  </action>
+  <action name="actAddPhrases">
+   <property name="text">
+    <string>Add Phrases...</string>
+   </property>
+  </action>
+  <action name="actionSwitch">
+   <property name="text">
+    <string>Switch</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Type</class>
+   <extends>QWidget</extends>
+   <header location="global">type.h</header>
+   <container>1</container>
+   <slots>
+    <signal>started()</signal>
+    <signal>paused()</signal>
+    <signal>stopped()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actPhrases</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>choosePhrasesMode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actLessons</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>chooseLessonsMode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actNextLesson</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>nextLesson()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actPrevLesson</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>prevLesson()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>chooseLessonsMode()</slot>
+  <slot>choosePhrasesMode()</slot>
+  <slot>nextLesson()</slot>
+  <slot>prevLesson()</slot>
+ </slots>
+</ui>
